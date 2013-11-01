@@ -2,7 +2,7 @@ package com.schlomp.pickem.security
 
 import org.apache.commons.lang.builder.HashCodeBuilder
 
-class UserRole {
+class UserRole implements Serializable{
 
     User user
     Role role

@@ -13,7 +13,10 @@ class UserPick {
         awayScore(nullable: true)
     }
 
-    User user
+    static belongsTo = [
+            user : User
+    ]
+
     ProMatchUp matchUp
     ProTeam winner
 
