@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f31cbf1-3e3c-4fe8-83f2-22bfbc7dd6ca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/schlomp/pickem/UserPick.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/schlomp/pickem/UserPick.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/Config.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/schlomp/pickem/security/Role.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/schlomp/pickem/security/Role.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/schlomp/pickem/security/User.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/schlomp/pickem/security/User.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/schlomp/pickem/security/UserRole.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/schlomp/pickem/security/UserRole.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
     </list>
     <ignored path="PickEm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -15,7 +16,7 @@
     <file path="/ProMatchUp.groovy" changelist="7f31cbf1-3e3c-4fe8-83f2-22bfbc7dd6ca" time="1382775321379" ignored="false" />
     <file path="/UserPick.groovy" changelist="7f31cbf1-3e3c-4fe8-83f2-22bfbc7dd6ca" time="1383283757365" ignored="false" />
     <file path="/fragment.java" changelist="7f31cbf1-3e3c-4fe8-83f2-22bfbc7dd6ca" time="1382775657292" ignored="false" />
-    <file path="/Dummy.txt" changelist="7f31cbf1-3e3c-4fe8-83f2-22bfbc7dd6ca" time="1383283258684" ignored="false" />
+    <file path="/Dummy.txt" changelist="7f31cbf1-3e3c-4fe8-83f2-22bfbc7dd6ca" time="1383286530996" ignored="false" />
     <file path="$PROJECT_DIR$/test/unit/com/schlomp/pickem/ProWeekTests.groovy" changelist="7f31cbf1-3e3c-4fe8-83f2-22bfbc7dd6ca" time="1383283343849" ignored="false" />
     <file path="/ProWeek.groovy" changelist="7f31cbf1-3e3c-4fe8-83f2-22bfbc7dd6ca" time="1383283680228" ignored="false" />
     <file path="$PROJECT_DIR$/test/unit/com/schlomp/pickem/ProWeekPicksTests.groovy" changelist="7f31cbf1-3e3c-4fe8-83f2-22bfbc7dd6ca" time="1383283511680" ignored="false" />
@@ -81,19 +82,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProTeam.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ProTeam.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/com/schlomp/pickem/ProTeam.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="26" selection-start="71" selection-end="71" vertical-scroll-proportion="0.11070111">
+            <state line="4" column="26" selection-start="71" selection-end="71" vertical-scroll-proportion="-2.6086957">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.groovy" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="User.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/com/schlomp/pickem/security/User.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="5" selection-start="343" selection-end="343" vertical-scroll-proportion="-4.5652175">
+            <state line="16" column="5" selection-start="289" selection-end="289" vertical-scroll-proportion="0.2877698">
               <folding />
             </state>
           </provider>
@@ -166,15 +167,15 @@
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -285,7 +286,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249694" sideWeight="0.6708286" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3291714" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -456,16 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/schlomp/pickem/security/User.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="5" selection-start="343" selection-end="343" vertical-scroll-proportion="-4.5652175">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/com/schlomp/pickem/security/UserRole.groovy">
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
@@ -491,7 +482,17 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="26" selection-start="71" selection-end="71" vertical-scroll-proportion="0.11070111">
+        <state line="4" column="26" selection-start="71" selection-end="71" vertical-scroll-proportion="-2.6086957">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/com/schlomp/pickem/security/User.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="5" selection-start="289" selection-end="289" vertical-scroll-proportion="0.2877698">
           <folding />
         </state>
       </provider>
