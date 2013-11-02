@@ -41,6 +41,24 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${proTeamInstance?.conference}">
+				<li class="fieldcontain">
+					<span id="conference-label" class="property-label"><g:message code="proTeam.conference.label" default="Conference" /></span>
+					
+						<span class="property-value" aria-labelledby="conference-label"><g:fieldValue bean="${proTeamInstance}" field="conference"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${proTeamInstance?.division}">
+				<li class="fieldcontain">
+					<span id="division-label" class="property-label"><g:message code="proTeam.division.label" default="Division" /></span>
+					
+						<span class="property-value" aria-labelledby="division-label"><g:fieldValue bean="${proTeamInstance}" field="division"/></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

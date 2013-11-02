@@ -28,6 +28,10 @@
 					
 						<g:sortableColumn property="location" title="${message(code: 'proTeam.location.label', default: 'Location')}" />
 					
+						<g:sortableColumn property="conference" title="${message(code: 'proTeam.conference.label', default: 'Conference')}" />
+					
+						<g:sortableColumn property="division" title="${message(code: 'proTeam.division.label', default: 'Division')}" />
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -37,6 +41,10 @@
 						<td><g:link action="show" id="${proTeamInstance.id}">${fieldValue(bean: proTeamInstance, field: "name")}</g:link></td>
 					
 						<td>${fieldValue(bean: proTeamInstance, field: "location")}</td>
+					
+						<td>${fieldValue(bean: proTeamInstance, field: "conference")}</td>
+					
+						<td>${fieldValue(bean: proTeamInstance, field: "division")}</td>
 					
 					</tr>
 				</g:each>

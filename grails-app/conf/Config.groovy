@@ -90,41 +90,6 @@ log4j = {
            'net.sf.ehcache.hibernate'
 }
 
-
-// Added by the Spring Security Core plugin:
-grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.schlomp.pickem.SecUser'
-grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.schlomp.pickem.SecUserSecRole'
-grails.plugin.springsecurity.authority.className = 'com.schlomp.pickem.SecRole'
-grails.plugin.springsecurity.controllerAnnotations.staticRules = [
-	'/':                              ['permitAll'],
-	'/index':                         ['permitAll'],
-	'/index.gsp':                     ['permitAll'],
-	'/**/js/**':                      ['permitAll'],
-	'/**/css/**':                     ['permitAll'],
-	'/**/images/**':                  ['permitAll'],
-	'/**/favicon.ico':                ['permitAll']
-]
-
-
-
-// Added by the Spring Security Core plugin:
-grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.schlomp.pickem.security.User'
-grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.schlomp.pickem.security.UserRole'
-grails.plugin.springsecurity.authority.className = 'com.schlomp.pickem.security.Role'
-grails.plugin.springsecurity.requestMap.className = 'com.schlomp.pickem.security.UserRole'
-grails.plugin.springsecurity.securityConfigType = 'Requestmap'
-grails.plugin.springsecurity.controllerAnnotations.staticRules = [
-	'/':                              ['permitAll'],
-	'/index':                         ['permitAll'],
-	'/index.gsp':                     ['permitAll'],
-	'/**/js/**':                      ['permitAll'],
-	'/**/css/**':                     ['permitAll'],
-	'/**/images/**':                  ['permitAll'],
-	'/**/favicon.ico':                ['permitAll']
-]
-
-
-
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.schlomp.pickem.security.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.schlomp.pickem.security.UserRole'
@@ -139,3 +104,6 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/favicon.ico':                ['permitAll']
 ]
 
+grails.plugin.springsecurity.roleHierarchy = '''
+    ROLE_ADMIN > ROLE_USER
+'''
