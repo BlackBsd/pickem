@@ -14,4 +14,8 @@ class ProWeek {
     ]
 
     int weekNumber
+
+    String toString() {
+        return "Week #" + weekNumber
+    }
 }

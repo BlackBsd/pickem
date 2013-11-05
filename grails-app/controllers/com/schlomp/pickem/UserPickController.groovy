@@ -3,7 +3,7 @@ package com.schlomp.pickem
 import grails.plugin.springsecurity.annotation.Secured
 import org.springframework.dao.DataIntegrityViolationException
 
-@Secured("ROLE_ADMIN")
+@Secured(["hasRole('ROLE_ADMIN')"])
 class UserPickController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]

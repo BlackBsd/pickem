@@ -5,6 +5,7 @@ class User {
 	transient springSecurityService
 
 	String username
+    String displayName
 	String password
 	boolean enabled = true
 	boolean accountExpired
@@ -16,6 +17,7 @@ class User {
 	static constraints = {
 		username blank: false, unique: true
 		password blank: false
+        displayName blank: false
 	}
 
 	static mapping = {
@@ -39,4 +41,8 @@ class User {
 	protected void encodePassword() {
 		password = springSecurityService.encodePassword(password)
 	}
+
+    String toString() {
+        return displayName
+    }
 }

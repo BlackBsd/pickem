@@ -27,4 +27,8 @@ class ProTeam {
     String location
     Conference conference
     Division division
+
+    String toString() {
+        return location + " " + name
+    }
 }

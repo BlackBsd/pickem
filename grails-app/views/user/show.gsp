@@ -41,6 +41,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${userInstance?.displayName}">
+				<li class="fieldcontain">
+					<span id="displayName-label" class="property-label"><g:message code="user.displayName.label" default="Display Name" /></span>
+					
+						<span class="property-value" aria-labelledby="displayName-label"><g:fieldValue bean="${userInstance}" field="displayName"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${userInstance?.accountExpired}">
 				<li class="fieldcontain">
 					<span id="accountExpired-label" class="property-label"><g:message code="user.accountExpired.label" default="Account Expired" /></span>

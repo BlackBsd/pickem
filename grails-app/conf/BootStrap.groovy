@@ -29,20 +29,22 @@ class BootStrap {
     def destroy = {
     }
 
-    private def setupRoles = {
+    private def setupRoles() {
         new Role(authority: "ROLE_USER").save(failOnError: true)
         new Role(authority: "ROLE_ADMIN").save(failOnError: true)
     }
 
-    private def setupUsers = {
-        new User(username : "tom", password : "tom").save(failOnError: true)
-        new User(username : "dick", password : "dick").save(failOnError: true)
-        new User(username : "harry", password : "harry").save(failOnError: true)
-        new User(username : "jane", password : "jane").save(failOnError: true)
-        new User(username : "admin", password : "admin").save(failOnError: true)
+    private def setupUsers() {
+        def users = ["tom", "dick", "harry", "jane"]
+
+        users.each() {
+            new User(username: it, password: it, displayName: "DN_" + it).save(failOnError: true)
+        }
+
+        new User(username : "admin", password : "admin", displayName: "DN_admin").save(failOnError: true)
     }
 
-    private def setupUserRoles = {
+    private def setupUserRoles() {
         def userRole = Role.findByAuthority("ROLE_USER");
         def adminRole = Role.findByAuthority("ROLE_ADMIN");
 
@@ -53,7 +55,7 @@ class BootStrap {
         new UserRole(user: User.findByUsername("admin"), role: adminRole).save(failOnError: true)
     }
 
-    private def setupTeams = {
+    private def setupTeams() {
         def afcEastTeams = [
                 "Buffalo": "Bills",
                 "Miami": "Dolphins",

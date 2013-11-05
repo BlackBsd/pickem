@@ -1,7 +1,9 @@
 package com.schlomp.pickem
 
+import grails.plugin.springsecurity.annotation.Secured
 import org.springframework.dao.DataIntegrityViolationException
 
+@Secured(["hasRole('ROLE_ADMIN')"])
 class ProTeamController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
