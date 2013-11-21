@@ -5,7 +5,6 @@ import com.schlomp.pickem.security.User
 class UserPick {
 
     static constraints = {
-        user(nullable: false)
         matchUp(nullable: false)
         winner(nullable: false)
 

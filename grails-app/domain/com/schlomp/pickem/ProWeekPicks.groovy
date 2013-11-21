@@ -4,7 +4,6 @@ class ProWeekPicks {
 
     static constraints = {
         proWeek(nullable: false)
-        userPicks(unique: true)
     }
 
     static hasMany = [

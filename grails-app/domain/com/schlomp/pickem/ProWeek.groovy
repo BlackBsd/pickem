@@ -4,8 +4,6 @@ class ProWeek {
 
     static constraints = {
         weekNumber(nullable: false)
-        proMatchUps(unique: true)
-        byeTeams(unique: true)
     }
 
     static hasMany = [

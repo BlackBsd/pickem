@@ -1,8 +1,14 @@
+import com.schlomp.pickem.ProMatchUp
 import com.schlomp.pickem.ProTeam
+import com.schlomp.pickem.ProWeek
+import com.schlomp.pickem.ProWeekPicks
+import com.schlomp.pickem.UserPick
 import com.schlomp.pickem.security.Role
 import com.schlomp.pickem.security.User
 import com.schlomp.pickem.security.UserRole
 import grails.util.Environment
+import org.joda.time.DateTime
+import org.joda.time.DateTimeZone
 
 class BootStrap {
 
@@ -13,6 +19,8 @@ class BootStrap {
                 setupRoles()
                 setupUsers()
                 setupUserRoles()
+
+                setupDevSeason()
                 break
 
             case Environment.TEST:
@@ -29,12 +37,12 @@ class BootStrap {
     def destroy = {
     }
 
-    private def setupRoles() {
+    static private def setupRoles() {
         new Role(authority: "ROLE_USER").save(failOnError: true)
         new Role(authority: "ROLE_ADMIN").save(failOnError: true)
     }
 
-    private def setupUsers() {
+    static private def setupUsers() {
         def users = ["tom", "dick", "harry", "jane"]
 
         users.each() {
@@ -44,7 +52,7 @@ class BootStrap {
         new User(username : "admin", password : "admin", displayName: "DN_admin").save(failOnError: true)
     }
 
-    private def setupUserRoles() {
+    static private def setupUserRoles() {
         def userRole = Role.findByAuthority("ROLE_USER");
         def adminRole = Role.findByAuthority("ROLE_ADMIN");
 
@@ -55,7 +63,7 @@ class BootStrap {
         new UserRole(user: User.findByUsername("admin"), role: adminRole).save(failOnError: true)
     }
 
-    private def setupTeams() {
+    static private def setupTeams() {
         def afcEastTeams = [
                 "Buffalo": "Bills",
                 "Miami": "Dolphins",
@@ -95,7 +103,7 @@ class BootStrap {
                 "Detroit" : "Lions",
                 "Green Bay" : "Packers",
                 "Minnesota" : "Vikings",
-                "Atlanta" : "Falcons"
+                "Chicago" : "Bears"
         ]
 
         def nfcSouthTeams = [
@@ -134,5 +142,28 @@ class BootStrap {
                 }
             }
         }
+    }
+
+    static private def setupDevSeason() {
+        def aTeam = ProTeam.findByName("49ers")
+        def bTeam = ProTeam.findByName("Bears")
+        def cTeam = ProTeam.findByName("Redskins")
+
+        def time = new DateTime(2013, 12, 25, 21, 0, DateTimeZone.UTC);
+        def match = new ProMatchUp(homeTeam: aTeam, awayTeam: bTeam, isTieBreaker: true, gameTime: time)
+        match.save(failOnError: true)
+
+        def week = new ProWeek()
+        week.setWeekNumber(1)
+        week.addToByeTeams(cTeam)
+        week.addToProMatchUps(match)
+        week.save(failOnError: true)
+
+        def admin = User.findByUsername("admin")
+        def adminPick = new UserPick(matchUp: match, user: admin, winner: aTeam)
+        adminPick.save(failOnError: true)
+
+        def weekPicks = new ProWeekPicks(userPicks: [adminPick], proWeek: week)
+        weekPicks.save(failOnError: true)
     }
 }

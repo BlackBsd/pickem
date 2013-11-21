@@ -1,6 +1,7 @@
 package com.schlomp.pickem
 
-import org.joda.time.DateTime
+import org.joda.time.*
+import org.joda.time.contrib.hibernate.PersistentDateTime
 
 class ProMatchUp {
 
@@ -13,6 +14,10 @@ class ProMatchUp {
         winningTeam(nullable: true)
         homeScore(nullable: true)
         awayScore(nullable: true)
+    }
+
+    static mapping = {
+        gameTime type: PersistentDateTime
     }
 
     ProTeam homeTeam

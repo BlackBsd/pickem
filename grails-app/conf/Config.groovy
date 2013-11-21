@@ -1,3 +1,20 @@
+import org.joda.time.DateTime
+import org.joda.time.Duration
+import org.joda.time.Instant
+import org.joda.time.Interval
+import org.joda.time.LocalDate
+import org.joda.time.LocalDateTime
+import org.joda.time.LocalTime
+import org.joda.time.Period
+import org.joda.time.contrib.hibernate.PersistentDateTime
+import org.joda.time.contrib.hibernate.PersistentDuration
+import org.joda.time.contrib.hibernate.PersistentInstant
+import org.joda.time.contrib.hibernate.PersistentInterval
+import org.joda.time.contrib.hibernate.PersistentLocalDate
+import org.joda.time.contrib.hibernate.PersistentLocalDateTime
+import org.joda.time.contrib.hibernate.PersistentLocalTimeAsString
+import org.joda.time.contrib.hibernate.PersistentPeriod
+
 // locations to search for config files that get merged into the main config;
 // config files can be ConfigSlurper scripts, Java properties files, or classes
 // in the classpath in ConfigSlurper format
@@ -107,3 +124,14 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 grails.plugin.springsecurity.roleHierarchy = '''
     ROLE_ADMIN > ROLE_USER
 '''
+// Added by the Joda-Time plugin:
+grails.gorm.default.mapping = {
+	"user-type" type: PersistentDateTime, class: DateTime
+	"user-type" type: PersistentDuration, class: Duration
+	"user-type" type: PersistentInstant, class: Instant
+	"user-type" type: PersistentInterval, class: Interval
+	"user-type" type: PersistentLocalDate, class: LocalDate
+	"user-type" type: PersistentLocalTimeAsString, class: LocalTime
+	"user-type" type: PersistentLocalDateTime, class: LocalDateTime
+	"user-type" type: PersistentPeriod, class: Period
+}
